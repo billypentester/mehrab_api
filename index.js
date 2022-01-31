@@ -6,10 +6,8 @@ const msg = require('./example.js')
 const dotenv = require('dotenv');
 dotenv.config();
 
-
 const app = express()
 const port =  process.env.PORT || process.env.localport
-console.log(process.env);
 
 // middlewares
 
