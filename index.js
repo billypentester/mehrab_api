@@ -26,20 +26,22 @@ app.get('/roadmap', (req, res) => {
 // get all universities
 
 app.get('/api', async(req, res) => {
-    const val = req.header('secret');
-    if(typeof val === 'undefined')
-    {
-        res.status(200).json({msg : "You need to set the header to request this API"})
-    }
-    else if(val !== "billy136")
-    {
-        res.status(200).json({msg : "You need special code to access the API"})
-    }
-    else
-    {
-        const list = await unimodel.find() 
-        res.status(200).send(list)
-    }
+//     const val = req.header('secret');
+//     if(typeof val === 'undefined')
+//     {
+//         res.status(200).json({msg : "You need to set the header to request this API"})
+//     }
+//     else if(val !== "billy136")
+//     {
+//         res.status(200).json({msg : "You need special code to access the API"})
+//     }
+//     else
+//     {
+//         const list = await unimodel.find() 
+//         res.status(200).send(list)
+//     }
+   const list = await unimodel.find() 
+   res.status(200).send(list)
     
 })
 
